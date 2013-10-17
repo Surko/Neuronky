@@ -10,10 +10,10 @@ end
 
 M = perceptron;
 
-for i=(1:1:size(inputVector,2))
-   estValue = perc_recall(perceptron,inputVector(:,i));
-   if estValue ~= expValue(i)
-       if estValue == 0
+estValue = perc_recall(perceptron,inputVector);
+for i=(1:1:size(inputVector,2))   
+   if estValue(i) ~= expValue(i)
+       if estValue(i) == 0
           M=M+learnPar*inputVector(:,i)';
        else
           M=M-learnPar*inputVector(:,i)';

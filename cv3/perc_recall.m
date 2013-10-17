@@ -7,10 +7,14 @@ if size(inputVector,1)~=size(perceptron,2)
    error(' Perceptron a vstupny vektor maju rozdielne velkosti '); 
 end
 
-if perceptron * inputVector > 0
-    c = 1;
-else
-    c = 0;
+c = perceptron * inputVector;
+
+for i=(1:1:size(inputVector,2))       
+    if c(i) > 0
+        c(i) = 1;
+    else
+        c(i) = 0;
+    end
 end
 
 end
