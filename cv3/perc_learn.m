@@ -14,13 +14,13 @@ inputVector=[inputVector;ones(1,size(inputVector,2))];
 for i=(1:1:maxit)
     errorFunction = perc_err(perceptron,inputVector,expValue);
     if errorFunction > 0
-        perceptron=perc_update(perceptron,inputVector,expValue,lam);
-    else
-        sprintf(' Zastavil som na epoche %d ', i)
-        break;
+        perceptron=perc_update(perceptron,inputVector,expValue,lam);        
+    else     
+        fprintf(' Zastavil som na epoche %d\n', i)   
+        return;
     end    
 end
-
+fprintf(' Nezastavil som ani po %d iteraciach\n', maxit)
 
 end
 
