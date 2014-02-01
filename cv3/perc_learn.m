@@ -1,5 +1,10 @@
 function perceptron = perc_learn( perceptron, inputVector, expValue, lam, maxit )
 %perc_learn - Funkcia urobi maximalne maxit iteracii ucenia perceptronu.
+%   perceptron - Vystavany perceptrom
+%   inputVector - Vstupny vektor, podla ktoreho perceptron ucime
+%   expValue - Vektor ocakavanych hodnot pre vstupne hodnoty
+%   lam - Parameter ucenia
+%   maxit - Pocet iteracii, ktore sa vykonaju, ked chyba je nenulova
 if maxit <= 0
     error(' Parameter maxit musi byt vacsi ako nula ');
 end
