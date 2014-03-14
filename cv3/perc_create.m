@@ -1,6 +1,6 @@
 function perceptron = perc_create( n, min, max )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%perc_create - Vytvara perceptron s n hodnotami. DOsadenie hodnot do
+%perceptronu je z [min,max]
 if nargin < 2
     min = 0;
     max = 1;

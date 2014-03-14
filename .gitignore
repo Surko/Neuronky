@@ -213,3 +213,11 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#DocX + Zip
+*.docx
+*.zip
+
+#Project Folder
+Projekt/*
+!Projekt/FaceRecogn.pdf
